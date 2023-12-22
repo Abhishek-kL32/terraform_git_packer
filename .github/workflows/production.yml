@@ -43,6 +43,6 @@ jobs:
         run: packer build -var-file=prod.pkvars.hcl .
         working-directory: ./packer/
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.PROD-ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.PROD_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PROD_SECRET_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.PROD_REGION }}
