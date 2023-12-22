@@ -44,7 +44,7 @@ jobs:
         working-directory: ./packer/
         
       - name: "packer build"
-        run: packer build .
+        run: packer build -var-file=prod.pkvars.hcl .
         working-directory: ./packer/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PROD-ACCESS_KEY }}
