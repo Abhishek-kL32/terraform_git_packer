@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       packer_version: "1.9.4"
-      AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
-      AWS_DEFAULT_REGION: ${{ secrets.REGION }}
-
 
     steps:
 
@@ -50,4 +46,3 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.PROD-ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PROD_SECRET_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.PROD_REGION }}
-
